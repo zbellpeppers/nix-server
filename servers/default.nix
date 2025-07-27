@@ -6,7 +6,7 @@
     # ./frigate
     # ./headscale
     ./samba
-    # ./traefik
+    ./traefik
   ];
   virtualisation.containers.enable = true;
   virtualisation = {
