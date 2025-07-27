@@ -5,6 +5,7 @@
     budget = {
       image = "ghcr.io/actualbudget/actual-server:latest";
       autoStart = true;
+      user = "1000:993";
       pull = "newer";
       ports = [
         "5006:5006"

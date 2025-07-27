@@ -5,6 +5,7 @@
     frigate = {
       image = "ghcr.io/blakeblackshear/frigate:0.16.0-rc1";
       privileged = true;
+      user = "1000:993";
       autoStart = true;
       extraOptions = [
         "--shm-size=512mb"

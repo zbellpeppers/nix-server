@@ -11,6 +11,7 @@
       image = "ghcr.io/tale/headplane:latest";
       autoStart = true;
       pull = "newer";
+      user = "1000:993";
       ports = [
         "3000:3000"
       ];
@@ -41,6 +42,7 @@
       cmd = [ "serve" ];
       autoStart = true;
       pull = "newer";
+      user = "1000:993";
       ports = [
         "8070:8070"
       ];
