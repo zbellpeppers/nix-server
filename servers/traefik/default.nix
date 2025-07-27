@@ -17,7 +17,7 @@
       volumes = [
         "/home/zachary/samba/docker/traefik/traefik.yml:/etc/traefik/traefik.yml:ro"
         "/home/zachary/samba/docker/traefik/letsencrypt:/letsencrypt"
-        "/var/run/podman/podman.sock:/var/run/docker.sock:ro"
+        "/run/podman/podman.sock:/var/run/docker.sock:ro"
       ];
       networks = [
         "traefik"

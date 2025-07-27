@@ -6,29 +6,17 @@ let
     user-debian
   ];
 
-  root-nixos = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFTGMooTZYyW0Fv2iqJsQTNzlYW97KuFPATj21CU/nWb";
-  root-debian = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIO1ltDTXpr8dLS6RNIzyuLCiF2+b4f+Sp+5F54xuiNHN";
-  systems = [
-    root-nixos
-    root-debian
-  ];
+  # root-nixos = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFTGMooTZYyW0Fv2iqJsQTNzlYW97KuFPATj21CU/nWb";
+  # root-debian = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIO1ltDTXpr8dLS6RNIzyuLCiF2+b4f+Sp+5F54xuiNHN";
+  # systems = [
+  #   root-nixos
+  #   root-debian
+  # ];
 in
 {
-  "headplane.age".publicKeys = [
-    user-debian
-    user-nixos
-  ];
-  "cloudflare-dydns.age".publicKeys = [
-    user-debian
-    user-nixos
-  ];
-  "traefik.age".publicKeys = [
-    user-debian
-    user-nixos
-  ];
-  "frigate.age".publicKeys = [
-    user-debian
-    user-nixos
-  ];
+  "headplane.age".publicKeys = [ users ];
+  "cloudflare-dydns.age".publicKeys = [ users ];
+  "traefik.age".publicKeys = [ users ];
+  "frigate.age".publicKeys = [ users ];
   # "secret2.age".publicKeys = users ++ systems;
 }
