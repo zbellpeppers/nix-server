@@ -5,7 +5,6 @@
     traefik = {
       image = "traefik:latest";
       autoStart = true;
-      user = "1000:993";
       ports = [
         "80:80"
         "443:443"
@@ -15,8 +14,8 @@
         /run/secrets/traefik.env
       ];
       volumes = [
-        "/home/zachary/samba/docker/traefik/traefik.yml:/etc/traefik/traefik.yml:ro"
-        "/home/zachary/samba/docker/traefik/letsencrypt:/letsencrypt"
+        "./traefik.yml:/etc/traefik/traefik.yml:ro"
+        "./letsencrypt:/letsencrypt"
       ];
       networks = [
         "traefik"
