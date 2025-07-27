@@ -29,6 +29,9 @@
       environmentFiles = [
         /run/secrets/frigate.env
       ];
+      networks = [
+        "traefik"
+      ];
     };
   };
 }
