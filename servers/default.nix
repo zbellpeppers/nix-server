@@ -5,7 +5,6 @@
     ./cloudflare
     ./frigate
     ./headscale
-    #./nginx
     ./samba
     ./traefik
   ];

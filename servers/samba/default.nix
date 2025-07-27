@@ -21,11 +21,9 @@
         browseable = "yes";
         "read only" = "no";
         "guest ok" = "no";
-        "valid users" = "@sambashare"; # only members of the group
-        "force user" = "zachary"; # files owned by Zachary
-        "force group" = "sambashare"; # but writable by the group
-        "create mask" = "0664";
-        "directory mask" = "0775";
+        "valid users" = "@sambashare";
+        "force user" = "zachary";
+        "force group" = "sambashare";
       };
     };
   };
