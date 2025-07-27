@@ -5,7 +5,6 @@
     traefik = {
       image = "traefik:latest";
       autoStart = true;
-      pull = "newer";
       ports = [
         "80:80"
         "443:443"
