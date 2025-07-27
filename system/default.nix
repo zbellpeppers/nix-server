@@ -8,6 +8,7 @@
     ./git
     ./network
     ./nix
+    ./shell
     ./users
   ];
   services = {
