@@ -2,6 +2,7 @@
 {
   imports = [
     #./budget
+    ./cloudflare
     #./ddclient
     #./headscale
     #./nginx
