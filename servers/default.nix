@@ -1,9 +1,9 @@
 { ... }:
 {
   imports = [
-    #./budget
+    ./budget
     ./cloudflare
-    #./headscale
+    ./headscale
     #./nginx
     ./samba
     ./traefik
