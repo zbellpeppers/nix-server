@@ -6,6 +6,7 @@
     #./headscale
     #./nginx
     ./samba
+    ./traefik
   ];
   virtualisation.containers.enable = true;
   virtualisation = {
