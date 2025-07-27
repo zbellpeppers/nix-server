@@ -40,6 +40,7 @@
         "8070:8070"
       ];
       volumes = [
+        "/run/podman/podman.sock:/var/run/docker.sock:ro"
         "/home/zachary/samba/docker/headscale/headscale-data:/var/lib/headscale"
         "/home/zachary/samba/docker/headscale/headscale-config:/etc/headscale"
       ];
