@@ -11,9 +11,9 @@
   virtualisation.containers.enable = true;
   virtualisation = {
     oci-containers.backend = "docker";
-    docker.rootless = {
+    docker = {
       enable = true;
-      setSocketVariable = true;
+      enableOnBoot = true;
     };
   };
 }
