@@ -14,15 +14,11 @@ let
   ];
 in
 {
-  "ddclient.age".publicKeys = [
-    user-nixos
-    user-debian
-  ];
-  "acme.age".publicKeys = [
-    user-nixos
-    user-debian
-  ];
   "headplane.age".publicKeys = [
+    user-debian
+    user-nixos
+  ];
+  "cloudflare-dydns.age".publicKeys = [
     user-debian
     user-nixos
   ];

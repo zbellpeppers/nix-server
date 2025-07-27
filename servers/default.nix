@@ -1,10 +1,10 @@
 { ... }:
 {
   imports = [
-    ./budget
-    ./ddclient
-    ./headscale
-    ./nginx
+    #./budget
+    #./ddclient
+    #./headscale
+    #./nginx
     ./samba
   ];
   virtualisation.containers.enable = true;
