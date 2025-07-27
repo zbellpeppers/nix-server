@@ -1,10 +1,10 @@
 { ... }:
 {
   imports = [
-    ./budget
+    #./budget
     ./cloudflare
-    ./headscale
-    ./nginx
+    #./headscale
+    #./nginx
     ./samba
   ];
   virtualisation.containers.enable = true;
