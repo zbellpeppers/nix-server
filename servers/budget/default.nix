@@ -10,7 +10,6 @@
         "5006:5006"
       ];
       volumes = [
-        "/run/podman/podman.sock:/var/run/docker.sock:ro"
         "/home/zachary/samba/docker/actual-budget/data:/data"
       ];
       environment = {
