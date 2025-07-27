@@ -9,7 +9,7 @@
       "networkmanager"
       "wheel"
       "sambashare"
-      "podman"
+      "docker"
     ];
     openssh.authorizedKeys.keys = [
       # Zach's debian pc
