@@ -14,8 +14,8 @@
         /run/secrets/traefik.env
       ];
       volumes = [
-        "./config/traefik.yml:/etc/traefik/traefik.yml:ro"
-        "./letsencrypt:/letsencrypt"
+        "/etc/nixos/servers/traefik/traefik.yml:/etc/traefik/traefik.yml:ro"
+        "/etc/nixos/servers/traefik/letsencrypt:/letsencrypt"
         "/run/podman/podman.sock:/var/run/docker.sock:ro"
       ];
       networks = [
