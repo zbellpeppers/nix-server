@@ -1,23 +1,19 @@
 { ... }:
 {
   imports = [
-    ./budget
-    ./cloudflare
-    ./frigate
-    ./headscale
+    # ./budget
+    # ./cloudflare
+    # ./frigate
+    # ./headscale
     ./samba
-    ./traefik
+    # ./traefik
   ];
   virtualisation.containers.enable = true;
   virtualisation = {
-    oci-containers.backend = "podman";
-    podman = {
+    oci-containers.backend = "docker";
+    docker.rootless = {
       enable = true;
-      # Create a `docker` alias for podman, to use it as a drop-in replacement
-      dockerCompat = true;
-      # Required for containers under podman-compose to be able to talk to each other.
-      defaultNetwork.settings.dns_enabled = true;
-      dockerSocket.enable = true;
+      setSocketVariable = true;
     };
   };
 }
