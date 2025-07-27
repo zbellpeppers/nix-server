@@ -9,5 +9,9 @@
     cfddns = {
       file = ./cloudflare-dydns.age;
     };
+    traefik = {
+      file = ./traefik.age;
+      path = "/run/secrets/traefik.env";
+    };
   };
 }

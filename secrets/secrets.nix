@@ -22,5 +22,9 @@ in
     user-debian
     user-nixos
   ];
+  "traefik.age".publicKeys = [
+    user-debian
+    user-nixos
+  ];
   # "secret2.age".publicKeys = users ++ systems;
 }

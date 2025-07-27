@@ -7,6 +7,7 @@
     domains = [
       "hs.bell-peppers.com"
       "budget.bell-peppers.com"
+      "traefik.bell-peppers.com"
     ];
   };
 }
