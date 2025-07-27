@@ -21,6 +21,9 @@
     nftables.enable = true;
     firewall = {
       enable = true;
+      trustedInterfaces = [
+        "podman1"
+      ];
       allowedTCPPorts = [
         80
         443
