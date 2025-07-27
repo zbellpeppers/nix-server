@@ -19,6 +19,17 @@
       environmentFiles = [
         /run/secrets/headplane.env
       ];
+      labels = {
+        "traefik.enable" = "true";
+        "traefik.http.routers.headscale.rule" = "Host(`hs.bell-peppers.com`) && PathPrefix(`/admin`)";
+        "traefik.http.routers.headscale.priority" = "10";
+        "traefik.http.routers.headscale.entrypoints" = "websecure";
+        "traefik.http.routers.headscale.tls.certresolver" = " letsencrypt";
+        "traefik.http.services.headscale.loadbalancer.server.port" = "3000";
+      };
+      networks = [
+        "traefik"
+      ];
     };
     headscale = {
       image = "ghcr.io/juanfont/headscale:latest";
@@ -36,8 +47,19 @@
         /run/secrets/headplane.env
       ];
       labels = {
+        # This is needed for Headplane to find it and signal it
         "me.tale.headplane.target" = "headscale";
+        # Traefik config
+        "traefik.enable" = "true";
+        "traefik.http.routers.headscale.rule" = "Host(`hs.bell-peppers.com`)";
+        "traefik.http.routers.headscale.priority" = "9";
+        "traefik.http.routers.headscale.entrypoints" = "websecure";
+        "traefik.http.routers.headscale.tls.certresolver" = " letsencrypt";
+        "traefik.http.services.headscale.loadbalancer.server.port" = "8070";
       };
+      networks = [
+        "traefik"
+      ];
     };
   };
 }

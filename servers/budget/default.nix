@@ -15,6 +15,16 @@
       environment = {
         ACTUAL_SERVER_URL = "https://budget.bell-peppers.com";
       };
+      networks = [
+        "traefik"
+      ];
+      labels = {
+        "traefik.enable" = "true";
+        "traefik.http.routers.headscale.rule" = "Host(`budget.bell-peppers.com`)";
+        "traefik.http.routers.headscale.entrypoints" = "websecure";
+        "traefik.http.routers.headscale.tls.certresolver" = " letsencrypt";
+        "traefik.http.services.headscale.loadbalancer.server.port" = "5006";
+      };
     };
   };
 }
