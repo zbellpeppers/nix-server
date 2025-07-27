@@ -1,6 +1,4 @@
 {
-  pkgs,
-  lib,
   ...
 }:
 {
@@ -23,27 +21,12 @@
       enable = true;
       trustedInterfaces = [
         "podman1"
+        "tailscale0"
       ];
       allowedTCPPorts = [
         80
         443
       ];
-    };
-  };
-  boot.kernel.sysctl = {
-    "net.ipv4.ip_forward" = 1;
-    "net.ipv6.conf.all.forwarding" = 1;
-  };
-
-  services = {
-    networkd-dispatcher = {
-      enable = true;
-      rules."50-tailscale" = {
-        onState = [ "routable" ];
-        script = ''
-          ${lib.getExe pkgs.ethtool} -K eno1 rx-udp-gro-forwarding on rx-gro-list off
-        '';
-      };
     };
   };
 }
