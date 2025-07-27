@@ -24,7 +24,7 @@
         "traefik.http.routers.headplane.rule" = "Host(`hs.bell-peppers.com`) && PathPrefix(`/admin`)";
         "traefik.http.routers.headplane.priority" = "10";
         "traefik.http.routers.headplane.entrypoints" = "websecure";
-        "traefik.http.routers.headplane.tls.certresolver" = " letsencrypt";
+        "traefik.http.routers.headplane.tls.certresolver" = "letsencrypt";
         "traefik.http.services.headplane.loadbalancer.server.port" = "3000";
       };
       networks = [
@@ -54,7 +54,7 @@
         "traefik.http.routers.headscale.rule" = "Host(`hs.bell-peppers.com`)";
         "traefik.http.routers.headscale.priority" = "9";
         "traefik.http.routers.headscale.entrypoints" = "websecure";
-        "traefik.http.routers.headscale.tls.certresolver" = " letsencrypt";
+        "traefik.http.routers.headscale.tls.certresolver" = "letsencrypt";
         "traefik.http.services.headscale.loadbalancer.server.port" = "8070";
       };
       networks = [
