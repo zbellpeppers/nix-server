@@ -3,6 +3,7 @@
   imports = [
     ./budget
     ./cloudflare
+    ./frigate
     ./headscale
     #./nginx
     ./samba

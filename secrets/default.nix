@@ -13,5 +13,9 @@
       file = ./traefik.age;
       path = "/run/secrets/traefik.env";
     };
+    frigate = {
+      file = ./frigate.age;
+      path = "/run/secrets/frigate.env";
+    };
   };
 }

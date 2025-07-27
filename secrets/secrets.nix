@@ -26,5 +26,9 @@ in
     user-debian
     user-nixos
   ];
+  "frigate.age".publicKeys = [
+    user-debian
+    user-nixos
+  ];
   # "secret2.age".publicKeys = users ++ systems;
 }
