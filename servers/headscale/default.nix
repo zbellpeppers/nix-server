@@ -14,7 +14,7 @@
         "/home/zachary/samba/docker/headscale/headscale-config/config.yaml:/etc/headscale/config.yaml"
         "/home/zachary/samba/docker/headscale/headscale-config/dns_records.json:/etc/headscale/dns_records.json"
         "/home/zachary/samba/docker/headscale/headplane-data:/var/lib/headplane"
-        "/run/user/1000/podman/podman.sock:/var/run/docker.sock:ro"
+        "/run/podman/podman.sock:/var/run/docker.sock:ro"
       ];
       environmentFiles = [
         /run/secrets/headplane.env
