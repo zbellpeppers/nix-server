@@ -20,10 +20,10 @@
       ];
       labels = {
         "traefik.enable" = "true";
-        "traefik.http.routers.headscale.rule" = "Host(`budget.bell-peppers.com`)";
-        "traefik.http.routers.headscale.entrypoints" = "websecure";
-        "traefik.http.routers.headscale.tls.certresolver" = " letsencrypt";
-        "traefik.http.services.headscale.loadbalancer.server.port" = "5006";
+        "traefik.http.routers.budget.rule" = "Host(`budget.bell-peppers.com`)";
+        "traefik.http.routers.budget.entrypoints" = "websecure";
+        "traefik.http.routers.budget.tls.certresolver" = " letsencrypt";
+        "traefik.http.services.budget.loadbalancer.server.port" = "5006";
       };
     };
   };
