@@ -1,5 +1,10 @@
 { ... }:
 {
+  services.tailscale = {
+    enable = true;
+    useRoutingFeatures = "client";
+    openFirewall = true;
+  };
   # Create networks before containers start
   virtualisation.oci-containers.containers = {
     headplane = {
