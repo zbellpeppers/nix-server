@@ -10,10 +10,11 @@
   ];
   virtualisation.containers.enable = true;
   virtualisation = {
-    oci-containers.backend = "docker";
-    docker = {
+    oci-containers.backend = "podman";
+    podman = {
       enable = true;
-      enableOnBoot = true;
+      dockerCompat = true;
+      defaultNetwork.settings.dns_enabled = true;
     };
   };
 }
